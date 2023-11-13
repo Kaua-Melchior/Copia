@@ -157,9 +157,48 @@ text-align: center;
 }
 </style>
 <div class="description-tJbLdd8199179-element ">
+  <style>   
+  #live-count {
+    font-size: 1.35em;
+    color: rgb(255, 255, 255);
+}
+</style>
+
 <h3>
-<span class="xl"></span>&nbsp;pessoas estão assistindo agora mesmo.
-</h3>
+  <div  class="xl" id="live-count">549</div>
+  <span class="xl"></span>&nbsp;Pessoas estão assistindo agora mesmo.
+  </h3>
+
+
+<script>
+  let liveViewerCount = 549;
+  const targetViewerCount = 798;
+
+  function updateLiveCount() {
+      // Gera um número aleatório para determinar se a contagem deve aumentar ou diminuir
+      const randomIncrement = Math.random() < 0.5 ? 1 : -1;
+
+      // Incrementa ou decrementa o número de espectadores
+      liveViewerCount += randomIncrement;
+
+      // Atualiza o número exibido
+      document.getElementById('live-count').innerText = liveViewerCount;
+
+      // Se atingir o valor alvo, para de atualizar
+      if (liveViewerCount === targetViewerCount) {
+          clearInterval(intervalId);
+      }
+  }
+
+  // Atualiza o número a cada 0.5 segundos (500 milissegundos)
+  const intervalId = setInterval(updateLiveCount, 500);
+
+  // Atualiza o número aleatoriamente a cada 20 minutos (1200000 milissegundos)
+  setTimeout(() => {
+      clearInterval(intervalId);
+  }, 1200000);
+</script>
+
 </div>
 </div>
 <div class="button-FiFXIs8199179 nMuPnB1139032">
