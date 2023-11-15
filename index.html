@@ -79,10 +79,15 @@ text-align: center;
 }
 }
 </style>
+
+
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Exemplo de Site</title> <style> .header-pBmpic3094525-element { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(255, 255, 255); text-align: center; padding: 24px 0; font-size: 125%; } </style> </head> <body> <div class="header-pBmpic3094525-element"> <h1> Esse vídeo sai do ar hoje,&nbsp;<span class="sm" id="data-atual">15/11/2023</span>&nbsp;às 23:59 </h1> </div> <script> function atualizarData() { const dataAtual = new Date(); const dia = String(dataAtual.getDate()).padStart(2, '0'); const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); const ano = dataAtual.getFullYear(); const dataFormatada = `${dia}/${mes}/${ano}`; document.getElementById('data-atual').textContent = dataFormatada; }
+  atualizarData(); </script>
+
+
+
 <div class="headline-1660141877348JxPPzg-element headline">
-<h1>
-Esse vídeo sai do ar hoje,&nbsp;<span class="sm">15/11/2023</span>&nbsp;às 23:59
-</h1>
+
 </div>
 </div>
 </div>
